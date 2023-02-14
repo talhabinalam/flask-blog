@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+{% block body %}
+<!-- Page Header-->
+<header class="masthead" style="background-image: url('{{ url_for('static', filename='assets/img/home-bg.jpg') }}')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="site-heading">
+                    <h2>Admin Panel</h2>
+                    <span class="subheading">Manage your posts</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Main Content-->
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+            <h4>Basic Actions:</h4>
+            <a href="/dashboard"><button class="btn btn-primary" style="padding: 10px;">Dashboard Home</button></a>
+            <hr>
+            <h4>Update Posts:</h4>
+            <form id="submitForm" action="/edit/{{s_no}}" method="post" data-sb-form-api-token="API_TOKEN">
+                <div class="form-floating">
+                    <input class="form-control" id="title" name="title" type="text" placeholder="Title" data-sb-validations="required" value="{{post.title}}" />
+                    <label for="title">Title</label>
+                </div>
+                <div class="form-floating">
+                    <input class="form-control" id="tag_line" name="tag_line" type="text" placeholder="Tagline" data-sb-validations="required,tagline" value="{{post.tag_line}}" />
+                    <label for="tag_line">Tagline</label>
+                </div>
+                <div class="form-floating">
+                    <input class="form-control" id="slug" name="slug" type="text" placeholder="Slug" data-sb-validations="required" value="{{post.slug}}" />
+                    <label for="slug">Slug</label>
+                </div>
+                <div class="form-floating">
+                    <textarea class="form-control" id="content" name="content" type="text" placeholder="Content" style="height: 12rem" data-sb-validations="required">{{post.content}}</textarea>
+                    <label for="content">Content</label>
+                </div>
+                <div class="form-floating">
+                    <input class="form-control" id="img_file" name="img_file" type="img" placeholder="Image File" value="{{post.img_file}}">
+                    <label for="img_file">Image File</label>
+                </div>
+                <br />
+                <!-- Submit success message-->
+                <!---->
+                <!-- This is what your users will see when the form-->
+                <!-- has successfully submitted-->
+                <div class="d-none" id="submitSuccess">
+                    <div class="text-center mb-3">
+                        <div class="fw-bolder">Update Post successful!</div>
+                        <br />
+                    </div>
+                </div>
+                <!-- Submit error message-->
+                <!---->
+                <!-- This is what your users will see when there is-->
+                <!-- an error submitting the form-->
+                <div class="d-none" id="submitErrorMessage">
+                    <div class="text-center text-danger mb-3">
+                        Error Updating Post!
+                    </div>
+                </div>
+                <!-- Submit Button-->
+                <button class="btn btn-primary" id="submitButton" type="submit">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

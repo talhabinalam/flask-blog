@@ -1,0 +1,21 @@
+{
+    "parameters": {
+        "local_server": "True",
+        "local_uri": "mysql://root:@localhost/codinghero",
+        "production_uri": "mysql://root:@localhost/codinghero",
+        "tw_uri": "https://twitter.com/codinghero",
+        "fb_uri": "https://facebook.com/codinghero",
+        "gh_uri": "https://github.com/codinghero",
+        "blog_title": "Coding Hero",
+        "blog_name": "Coding Hero",
+        "tag_line": "A Blog liked by Programmers",
+        "gmail-user": "your@gmail.com",
+        "gmail-password": "google app generated key",
+        "about_text": "Hello, My name is Talha Bin Alam. I am a web developer and I am developing this blog site using Flask. Thank You!",
+        "no_of_posts": 3,
+        "login_img": "login.svg",
+        "admin_user": "your@gmail.com",
+        "admin_pass": "pass",
+        "upload_location": "C:\\Users\\Pavilion\\Desktop\\Flask_Blog\\static\\upload"
+    }
+}
