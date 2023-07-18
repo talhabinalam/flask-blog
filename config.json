@@ -11,7 +11,7 @@
         "tag_line": "A Blog liked by Programmers",
         "gmail-user": "your@gmail.com",
         "gmail-password": "google app generated key",
-        "about_text": "Hello, My name is Talha Bin Alam. I am a web developer and I am developing this blog site using Flask. Thank You!",
+        "about_text": "Hello, My name is Talha Bin Alam. I am a web developer and I developed this blog site using Flask. Thank You!",
         "no_of_posts": 3,
         "login_img": "login.svg",
         "admin_user": "your@gmail.com",
